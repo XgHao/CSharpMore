@@ -20,16 +20,15 @@ namespace Invoke_And_BeginInvoke
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Thread.CurrentThread.ManagedThreadId.ToString());
-
-            BeginInvoke(new Action(() =>
+            Task.Run(() =>
             {
-                foreach (var item in tv_1.Nodes)
+                while (true)
                 {
-                    Console.WriteLine(item.ToString());
+                    int cnt = lbl_Count.GetInt();
+                    lbl_Count.SetInt(++cnt);
+                    Thread.Sleep(1000);
                 }
-                Console.WriteLine(Thread.CurrentThread.ManagedThreadId.ToString());
-            }));
+            });
         }
     }
 }

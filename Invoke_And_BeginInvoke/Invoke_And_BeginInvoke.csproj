@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{45597016-127B-45FF-8403-2ABD2F580C1F}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>Invoke_And_BeginInvoke</RootNamespace>
     <AssemblyName>Invoke_And_BeginInvoke</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExtendMethods.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
